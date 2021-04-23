@@ -19,13 +19,15 @@
             :ishljs = "true"
           ></mavon-editor>
         </div>
-        <el-pagination
-          background
-          :page-size="pageSize"
-          @current-change="currentChange"
-          layout="prev, pager, next"
-          :total="total">
-        </el-pagination>
+        <div class="pagination">
+          <el-pagination
+            background
+            :page-size="pageSize"
+            @current-change="currentChange"
+            layout="prev, pager, next"
+            :total="total">
+          </el-pagination>
+        </div>
     </div>
 </template>
 
@@ -38,7 +40,7 @@ export default {
   data () {
       return {
         contentList: [],
-        pageSize: 1,
+        pageSize: 10,
         total: 0,
         page: 1,
         categroy_id: ''
@@ -112,5 +114,8 @@ export default {
   .blog-page .v-note-show,
   .blog-page  .v-show-content {
     overflow: hidden !important;
+  }
+  .pagination {
+    padding-top: 30px;
   }
 </style>

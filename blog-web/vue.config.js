@@ -6,8 +6,8 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        // target: 'http://192.168.168.72:3000/', // 公司
-        target: 'http://192.168.0.104:3000', // 家里
+        target: 'http://192.168.168.72:3000/', // 公司
+        // target: 'http://192.168.0.104:3000', // 家里
         ws: true,
         changeOrigin: true,
         pathRewrite: {
